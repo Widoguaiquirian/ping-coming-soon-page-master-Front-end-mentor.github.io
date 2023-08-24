@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: white; }
+
+img {
+  max-width: 100%; }
+
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+small,
+p,
+figure {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/*missing alt attribute*/
+img:not([alt]) {
+  outline: 5px dashed red;
+  outline-offset: 5px; }
+
+/*empty alt attribute*/
+img[alt=""] {
+  outline: 5px solid blue;
+  outline-offset: 15px; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Libre Franklin", sans-serif; }
+
+body {
+  font-size: 2rem; }
+
+.uti-svg-ico {
+  align-items: center;
+  display: flex;
+  height: 3rem;
+  justify-content: center;
+  line-height: 0;
+  width: 3rem; }
+
+.main {
+  width: 1440px;
+  height: 1024px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+  .main-hero {
+    padding: 8rem 0; }
+    .main-hero-logo {
+      margin-bottom: 6rem; }
+    .main-hero-title {
+      font-weight: normal;
+      color: #969696;
+      margin-bottom: 1rem;
+      font-size: 4.5rem;
+      letter-spacing: 1px; }
+      .main-hero-title span {
+        font-weight: bold;
+        color: #151f29; }
+    .main-hero-subtitle {
+      color: #151f29;
+      font-weight: 500; }
+    .main-hero-form {
+      width: fit-content;
+      margin: 4.5rem auto; }
+      .main-hero-form input {
+        width: 420px;
+        height: 5.5rem;
+        border-radius: 50px;
+        font-size: 1.4rem;
+        padding-left: 2rem;
+        outline: none;
+        border: 1px solid lightgray; }
+        .main-hero-form input::placeholder {
+          color: lightgray;
+          letter-spacing: 1px; }
+      .main-hero-form-btn {
+        height: 5.5rem;
+        width: 20rem;
+        border-radius: 50px;
+        background: #4f7df3;
+        margin-left: 1.5rem;
+        border: none;
+        cursor: pointer;
+        color: white; }
