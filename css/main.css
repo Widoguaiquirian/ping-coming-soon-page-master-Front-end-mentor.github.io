@@ -52,7 +52,7 @@ body {
   margin: 0 auto;
   text-align: center; }
   .main-hero {
-    padding: 8rem 0; }
+    padding: 8rem 0 4rem 0; }
     .main-hero-logo {
       margin-bottom: 6rem; }
     .main-hero-title {
@@ -69,10 +69,13 @@ body {
       font-weight: 500; }
     .main-hero-form {
       width: fit-content;
-      margin: 4.5rem auto; }
+      margin: 4.5rem auto;
+      position: relative;
+      max-width: 100%; }
       .main-hero-form input {
         width: 420px;
         height: 5.5rem;
+        max-width: 100%;
         border-radius: 50px;
         font-size: 1.4rem;
         padding-left: 2rem;
@@ -81,6 +84,14 @@ body {
         .main-hero-form input::placeholder {
           color: lightgray;
           letter-spacing: 1px; }
+      .main-hero-form-error {
+        position: absolute;
+        color: red;
+        bottom: -23px;
+        font-size: 1.4rem;
+        font-style: italic;
+        left: 3%;
+        visibility: hidden; }
       .main-hero-form-btn {
         height: 5.5rem;
         width: 20rem;
@@ -89,4 +100,60 @@ body {
         margin-left: 1.5rem;
         border: none;
         cursor: pointer;
+        box-shadow: 1px 10px 7px rgba(0, 0, 0, 0.068);
         color: white; }
+        .main-hero-form-btn:hover {
+          background: #c2d3ff; }
+  .main-graph {
+    margin: 0 auto 6rem auto;
+    width: 640px;
+    max-width: 100%; }
+    .main-graph img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center; }
+  .main-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .main-social-ul {
+      display: flex;
+      width: fit-content;
+      margin-bottom: 2.5rem; }
+      .main-social-ul-li {
+        margin: 0 1rem; }
+        .main-social-ul-li a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          padding: 1rem;
+          width: 30px;
+          font-size: 1.4rem;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid lightgray;
+          color: #4f7df3; }
+          .main-social-ul-li a:hover {
+            background-color: #4f7df3;
+            color: white; }
+    .main-social-copy {
+      color: #969696; }
+
+@media (max-width: 600px) {
+  .main {
+    max-width: 90%; }
+    .main-hero-title {
+      font-size: 2.5rem; }
+    .main-hero-form-error {
+      top: 32%;
+      left: 16%; }
+    .main-hero-form-btn {
+      width: 100%;
+      margin: 4rem 0; }
+    .main-graph {
+      margin-bottom: 10rem; }
+    .main-social-copy {
+      font-size: 1.4rem; } }

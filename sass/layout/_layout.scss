@@ -6,7 +6,7 @@
    text-align: center;
 
    &-hero {
-      padding: 8rem 0;
+      padding: 8rem 0 4rem 0;
 
       &-logo {
          margin-bottom: 6rem;
@@ -14,14 +14,14 @@
 
       &-title {
          font-weight: normal;
-         color: $gray;
+         color: $tertiary-color;
          margin-bottom: 1rem;
          font-size: 4.5rem;
          letter-spacing: 1px;
 
          span {
             font-weight: bold;
-            color: $very-dark-blue;
+            color: $quaternary-color;
          }
       }
 
@@ -33,10 +33,13 @@
       &-form {
          width: fit-content;
          margin: 4.5rem auto;
+         position: relative;
+         max-width: 100%;
 
          input {
             width: 420px;
             height: 5.5rem;
+            max-width: 100%;
             border-radius: 50px;
             font-size: 1.4rem;
             padding-left: 2rem;
@@ -49,6 +52,16 @@
             }
          }
 
+         &-error {
+            position: absolute;
+            color: red;
+            bottom: -23px;
+            font-size: 1.4rem;
+            font-style: italic;
+            left: 3%;
+            visibility: hidden;
+         }
+
          &-btn {
             height: 5.5rem;
             width: 20rem;
@@ -57,7 +70,98 @@
             margin-left: 1.5rem;
             border: none;
             cursor: pointer;
+            box-shadow: 1px 10px 7px rgba(0, 0, 0, 0.068);
             color: white;
+
+            &:hover {
+               background: $primary-color-light;
+            }
+         }
+      }
+   }
+
+   &-graph {
+      margin: 0 auto 6rem auto;
+      width: 640px;
+      max-width: 100%;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
+   }
+
+   &-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      &-ul {
+         display: flex;
+         width: fit-content;
+         margin-bottom: 2.5rem;
+
+         &-li {
+            margin: 0 1rem;
+
+            a {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               text-decoration: none;
+               padding: 1rem;
+               width: 30px;
+               font-size: 1.4rem;
+               height: 30px;
+               border-radius: 50%;
+               border: 1px solid lightgray;
+               color: $primary-color;
+
+               &:hover {
+                  background-color: $primary-color;
+                  color: white;
+               }
+            }
+         }
+      }
+
+      &-copy {
+         color: $tertiary-color;
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .main {
+      max-width: 90%;
+      &-hero {
+         &-title {
+            font-size: 2.5rem;
+         }
+
+         &-form {
+            &-error {
+               top: 32%;
+               left: 16%;
+            }
+
+            &-btn {
+               width: 100%;
+               margin: 4rem 0;
+            }
+         }
+      }
+
+      &-graph {
+         margin-bottom: 10rem;
+      }
+
+      &-social {
+         &-copy {
+            font-size: 1.4rem;
          }
       }
    }
